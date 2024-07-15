@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+    height: 100vh;
+    background: url('sky.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow-y: auto;
+}
+
+.container {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3); /* Low opacity background */
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px); /* Blurred background */
+    overflow-y: auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-form input:focus {
+    border-color: #4caf50;
+}
+
+.search-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #45a049;
+}
+
+.weather-container {
+    margin-top: 20px;
+}
+
+.current-weather, .daily-forecast, .hourly-forecast, .twelve-hour-forecast {
+    margin-bottom: 20px;
+    animation: fadeIn 1s;
+}
+
+.forecast-section {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.weather-detail {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 5px;
+    min-width: 120px;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    backdrop-filter: blur(10px);
+    flex-shrink: 0;
+}
+
+.weather-detail:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.weather-icon {
+    width: 50px;
+    height: 50px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
